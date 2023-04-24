@@ -3728,11 +3728,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nikitha.Dandu\\AngularWebApi\\Angular.NetWebApi\\API\\Flights\\Flights.API\\Flights.API.csproj",
+      "projectUniqueName": "C:\\Users\\Nikitha.Dandu\\AngularWebApi\\Angular.NetWebApi\\Angular.NetWebApi\\API\\Flights\\Flights.API\\Flights.API.csproj",
       "projectName": "Flights.API",
-      "projectPath": "C:\\Users\\Nikitha.Dandu\\AngularWebApi\\Angular.NetWebApi\\API\\Flights\\Flights.API\\Flights.API.csproj",
+      "projectPath": "C:\\Users\\Nikitha.Dandu\\AngularWebApi\\Angular.NetWebApi\\Angular.NetWebApi\\API\\Flights\\Flights.API\\Flights.API.csproj",
       "packagesPath": "C:\\Users\\Nikitha.Dandu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nikitha.Dandu\\AngularWebApi\\Angular.NetWebApi\\API\\Flights\\Flights.API\\obj\\",
+      "outputPath": "C:\\Users\\Nikitha.Dandu\\AngularWebApi\\Angular.NetWebApi\\Angular.NetWebApi\\API\\Flights\\Flights.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

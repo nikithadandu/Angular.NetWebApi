@@ -10,7 +10,10 @@ namespace Flights.API.Models
         public string ModelName { get; set; }
         public string SerialNumber { get; set; }
         public string RegistrationNumber { get; set; }
+        public string RegistrationStatus { get; set; }
         public DateTime RegistrationDate { get; set; }
+
+
 
     }
 }
