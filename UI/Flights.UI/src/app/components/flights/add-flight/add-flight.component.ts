@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, RequiredValidator, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { Flight } from 'src/app/models/flight.model';
 import { FlightsService } from 'src/app/services/flights.service';
@@ -11,6 +11,7 @@ import { FlightsService } from 'src/app/services/flights.service';
 })
 export class AddFlightComponent implements OnInit{
   
+
   addFlightRequest: Flight= {
     id : '',
     modelName : '',
@@ -22,8 +23,13 @@ export class AddFlightComponent implements OnInit{
   constructor(private flightService: FlightsService, private router: Router, private formBuilder:FormBuilder) {}
   
   flightForm = this.formBuilder.group({
-    modelName:['', Validators.required],
+    modelName:['',Validators.required],
+    serialNumber: ['',Validators.required],
+    registrationNumber:['',Validators.required],    
+    registrationStatus: ['',Validators.required],
+    registrationDate: ['',Validators.required],
   })
+
   ngOnInit(): void {
   }
 
@@ -36,10 +42,7 @@ export class AddFlightComponent implements OnInit{
       }
     });
   }
-
-
-
-  
+ 
 }
 
 

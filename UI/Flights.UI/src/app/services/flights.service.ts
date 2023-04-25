@@ -18,7 +18,7 @@ export class FlightsService {
    }
 
    addFlight(addFlightRequest: Flight): Observable<Flight> {
-    addFlightRequest.id = '0000000-0000-0000-00000000';
+    addFlightRequest.id = '00000000-0000-0000-0000-000000000000';
     return this.http.post<Flight>(this.baseApiUrl + '/api/flights', addFlightRequest);
    }
 }
