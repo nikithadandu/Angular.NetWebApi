@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  longText = `This application displays the list of all the registered aircrafts and allows user to add new aircrafts.`;
+  Description = `This application displays the list of all the registered aircrafts and allows user to add new aircrafts.`;
 }

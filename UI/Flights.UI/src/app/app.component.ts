@@ -7,7 +7,9 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Flights.UI';
+
+  title = 'Flights UI';
+  
   constructor(private formBuilder:FormBuilder){}
 
   flightForm = this.formBuilder.group({
@@ -16,4 +18,5 @@ export class AppComponent {
     registrationDate:[''],
     registrationStatus:['']
   })
+
 }

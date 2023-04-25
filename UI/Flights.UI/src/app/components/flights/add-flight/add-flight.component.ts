@@ -34,7 +34,6 @@ export class AddFlightComponent implements OnInit{
   }
 
   addFlight() {
-    console.log('Form data is', this.flightForm.value)
     this.flightService.addFlight(this.addFlightRequest)
     .subscribe({
       next: (flight) => {

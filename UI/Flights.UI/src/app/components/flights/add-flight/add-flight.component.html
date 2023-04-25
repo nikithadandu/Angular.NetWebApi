@@ -6,33 +6,34 @@
         </mat-card-header>
         <mat-card-content>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     
                     <mat-form-field appearance="fill" class="full-width">
-                        <mat-label>Model Name</mat-label>
-                        <input formControlName="modelName" matInput>
-                      </mat-form-field>
-                      <mat-form-field appearance="fill">
-                        <mat-label>Serial Number</mat-label>
-                        <input formControlName="serialNumber" matInput>
-                      </mat-form-field>
-                      <mat-form-field appearance="fill">
-                        <mat-label>Registration Number</mat-label>
-                        <input formControlName="registrationNumber"  matInput>
-                      </mat-form-field>
-                      <mat-form-field appearance="fill">
-                        <mat-label>Registration Date</mat-label>
-                        <input formControlName="registrationDate" matInput [matDatepicker]="picker">
-                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                      </mat-form-field>
-                      <mat-form-field appearance="fill">
-                        <mat-label>Registration Status</mat-label>
-                        <mat-select formControlName="registrationStatus">
-                          <mat-option value="registered">Registered</mat-option>
-                          <mat-option value="unregistered">Not Registered</mat-option>
-                        </mat-select>
-                      </mat-form-field>
+                       <mat-label>Model Name</mat-label>
+                       <input formControlName="modelName" matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                       <mat-label>Serial Number</mat-label>
+                       <input formControlName="serialNumber" matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                       <mat-label>Registration Number</mat-label>
+                       <input formControlName="registrationNumber"  matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                       <mat-label>Registration Date</mat-label>
+                       <input formControlName="registrationDate" matInput [matDatepicker]="picker">
+                       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                       <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                       <mat-label>Registration Status</mat-label>
+                       <mat-select formControlName="registrationStatus">
+                         <mat-option value="registered">Registered</mat-option>
+                         <mat-option value="unregistered">Not Registered</mat-option>
+                       </mat-select>
+                    </mat-form-field>
+                    
                 </div>
             </div>
         </mat-card-content>

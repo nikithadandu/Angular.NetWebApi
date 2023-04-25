@@ -7,6 +7,7 @@ import { Flight } from '../models/flight.model';
 @Injectable({
   providedIn: 'root'
 })
+
 export class FlightsService {
 
   baseApiUrl: string = environment.baseApiUrl;

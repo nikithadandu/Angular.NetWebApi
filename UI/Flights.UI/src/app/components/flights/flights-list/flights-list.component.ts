@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DateAdapter } from '@angular/material/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Flight } from 'src/app/models/flight.model';
 import { FlightsService } from 'src/app/services/flights.service';
@@ -12,9 +11,9 @@ import { FlightsService } from 'src/app/services/flights.service';
 export class FlightsListComponent implements OnInit {
 
   flights: Flight[] = [];
-
   dataSource: any;
   displayedColumns: string[] = ['id','modelName','registrationDate','registrationNumber','registrationStatus','serialNumber'];
+  
   constructor(private flightsService: FlightsService) {}
 
   ngOnInit(): void {
@@ -22,7 +21,6 @@ export class FlightsListComponent implements OnInit {
     .subscribe(data => {
       this.flights = data;
       this.dataSource = new MatTableDataSource(this.flights);
-        console.log(data);
-    })
+     })
   }
 }
