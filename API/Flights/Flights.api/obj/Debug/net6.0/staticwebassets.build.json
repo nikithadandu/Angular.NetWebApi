@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "TQmsDsu9E7btcYLAZ2hfkbb1UbhD4Kym+1st+PqG4g0=",
+  "Source": "Flights.API",
+  "BasePath": "_content/Flights.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Flights.API\\wwwroot",
+      "Source": "Flights.API",
+      "ContentRoot": "C:\\Users\\Nikitha.Dandu\\AngularWebApi\\Angular.NetWebApi\\Angular.NetWebApi\\API\\Flights\\Flights.API\\wwwroot\\",
+      "BasePath": "_content/Flights.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
