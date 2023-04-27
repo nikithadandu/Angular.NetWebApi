@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, RequiredValidator, Validators } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
-import { Flight } from 'src/app/models/flight.model';
+import { Validators, FormBuilder  } from '@angular/forms';
 import { FlightsService } from 'src/app/services/flights.service';
 
 @Component({
@@ -10,39 +8,24 @@ import { FlightsService } from 'src/app/services/flights.service';
   styleUrls: ['./add-flight.component.css']
 })
 export class AddFlightComponent implements OnInit{
-  
+ 
+  Flight = this.fb.group({
+    modelName: ['', Validators.required],
+    serialNumber: ['', Validators.required],
+    registrationNumber: ['', Validators.required],   
+    registrationStatus: ['', Validators.required],
+    registrationDate: ['', Validators.required],
+  });
 
-  addFlightRequest: Flight= {
-    id : '',
-    modelName : '',
-    serialNumber: '',
-    registrationNumber: '',
-    registrationStatus: '',
-    registrationDate: new Date(),
-  };
-  constructor(private flightService: FlightsService, private router: Router, private formBuilder:FormBuilder) {}
+  constructor(private flight: FlightsService, private fb: FormBuilder) {}
   
-  flightForm = this.formBuilder.group({
-    modelName:['',Validators.required],
-    serialNumber: ['',Validators.required],
-    registrationNumber:['',Validators.required],    
-    registrationStatus: ['',Validators.required],
-    registrationDate: ['',Validators.required],
-  })
-
   ngOnInit(): void {
   }
 
-  addFlight() {
-    this.flightService.addFlight(this.addFlightRequest)
-    .subscribe({
-      next: (flight) => {
-        this.router.navigate(['flights']);
-      }
+  saveData() {
+    this.flight.addFlight(this.Flight.value).subscribe((result)=>{
+      console.log(result);
     });
   }
  
 }
-
-
-

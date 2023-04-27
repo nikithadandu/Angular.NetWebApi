@@ -18,8 +18,8 @@ export class FlightsService {
       return this.http.get<Flight[]>(this.baseApiUrl + '/api/flights');
    }
 
-   addFlight(addFlightRequest: Flight): Observable<Flight> {
-    addFlightRequest.id = '00000000-0000-0000-0000-000000000000';
-    return this.http.post<Flight>(this.baseApiUrl + '/api/flights', addFlightRequest);
+   addFlight(flight:any) {
+    flight.id = '00000000-0000-0000-0000-000000000000';
+    return this.http.post<Flight>(this.baseApiUrl + '/api/flights', flight);
    }
 }
