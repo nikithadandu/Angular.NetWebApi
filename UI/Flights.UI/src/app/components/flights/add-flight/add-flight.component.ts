@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder  } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FlightsService } from 'src/app/services/flights.service';
 
 @Component({
@@ -17,14 +18,17 @@ export class AddFlightComponent implements OnInit{
     registrationDate: ['', Validators.required],
   });
 
-  constructor(private flight: FlightsService, private fb: FormBuilder) {}
+  constructor(private flight: FlightsService, private fb: FormBuilder, private router:Router) {}
   
   ngOnInit(): void {
   }
 
-  saveData() {
-    this.flight.addFlight(this.Flight.value).subscribe((result)=>{
-      console.log(result);
+  addFlight() {
+    this.flight.addFlight(this.Flight.value)
+    .subscribe({
+      next: (flight) => {
+        this.router.navigate(['flights']);
+      }
     });
   }
  
