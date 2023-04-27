@@ -19,7 +19,7 @@ export class AddFlightComponent implements OnInit{
   });
 
   constructor(private flight: FlightsService, private fb: FormBuilder, private router:Router) {}
-  
+
   ngOnInit(): void {
   }
 
