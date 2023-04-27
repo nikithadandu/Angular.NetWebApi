@@ -4,7 +4,7 @@
   </mat-card-header>
   <mat-card-content>
     <div class="container my-5" >
-      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="flights">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="flights.length > 0">
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef> ID </th>
           <td mat-cell *matCellDef="let flight"> {{flight.id}} </td>
@@ -39,7 +39,7 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
 
-      <p *ngIf="!flights">No Aifcrafts found</p>     
+      <p *ngIf="flights.length <= 0">No Aifcrafts found</p>     
     </div>
   </mat-card-content>
   <mat-card-footer>
